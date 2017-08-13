@@ -1,4 +1,5 @@
 from random import randint
+from class_score import ClassScore
 DIRECTIONS = {0: 'offshore', 1: 'onshore'}
 
 
@@ -8,6 +9,6 @@ class Wind(object):
         self.direction = DIRECTIONS[randint(0, 1)]
 
         if self.direction == 'offshore':
-            return 1
+            ClassScore(1, 'offshore wind loooking righteous!')
         else:
-            return 0
+            ClassScore(0, 'onshore wind will doe')
