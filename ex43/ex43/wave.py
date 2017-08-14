@@ -5,9 +5,9 @@ SHAPES = ['mushy', 'sledge', 'curl']
 
 class Wave(object):
 
-    def __init__(self):
-        self.speed = randint(0, 10)
-        self.shape = SHAPES[randint(0, len(SHAPES)-1)]
+    def __init__(self, speed=None, shape=None):
+        self.speed = speed or randint(0, 10)
+        self.shape = shape or SHAPES[randint(0, len(SHAPES)-1)]
 
     def set_wave(self):
         if self.speed <= 3 and self.shape == 'mushy':
