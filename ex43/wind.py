@@ -8,7 +8,10 @@ class Wind(object):
     def __init__(self):
         self.direction = DIRECTIONS[randint(0, 1)]
 
+    def set_wind(self):
         if self.direction == 'offshore':
-            ClassScore(1, 'offshore wind loooking righteous!')
+            cs = ClassScore(1, 'offshore wind loooking righteous!')
+            return cs.configure()
         else:
-            ClassScore(0, 'onshore wind will doe')
+            cs = ClassScore(0, 'onshore wind will doe')
+            return cs.configure()

@@ -9,14 +9,19 @@ class Wave(object):
         self.speed = randint(0, 10)
         self.shape = SHAPES[randint(0, len(SHAPES)-1)]
 
+    def set_wave(self):
         if self.speed <= 3 and self.shape == 'mushy':
-            ClassScore(0, 'not even worth it today')
+            cs = ClassScore(0, 'not even worth it today')
+            return cs.configure()
         elif self.speed <= 3:
-            ClassScore(1, 'passable, brah!')
+            cs = ClassScore(1, 'passable, brah!')
+            return cs.configure()
         elif self.speed < 8 and self.shape == 'sledge':
-            ClassScore(2, 'gnarly dudeeee')
+            cs = ClassScore(2, 'gnarly dudeeee')
+            return cs.configure()
         elif self.speed > 8 and self.shape == 'curl':
-            ClassScore(3, 'hang ten my ma, the waves are fine')
+            cs = ClassScore(3, 'hang ten my ma, the waves are fine')
+            return cs.configure()
         else:
-            ClassScore(1, 'global warming')
-
+            cs = ClassScore(1, 'global warming')
+            return cs.configure()
